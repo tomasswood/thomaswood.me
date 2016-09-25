@@ -34,7 +34,11 @@ $font-size-large: 16px;
 $font-size-medium: 14px;
 $font-size-small: 12px;
 
-html {
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
     font-size: $font-size-large;
 
     @include breakpoint(medium down) {
@@ -125,8 +129,11 @@ p {
     background-color: $primary;
     background-blend-mode: soft-light;
     width: 100%;
-    height: 100vh;
     text-align: center;
+
+    &-wrapper {
+        min-height: 100vh;        
+    }
 }
 
 .main {
