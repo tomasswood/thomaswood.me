@@ -1,3 +1,3 @@
 # Personal Website
 
-My personal website located at http://thomaswood.me/
+My personal website located at https://thomaswood.me/
