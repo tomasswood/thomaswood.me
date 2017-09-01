@@ -1,38 +1,16 @@
-@import 'foundation/foundation';
+@import '~foundation-sites/scss/foundation';
 
-@include foundation-everything;
-@import 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700';
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-typography;
 
-$white:             darken(white, 0%);
-$near-white:        darken($white, 1%);
-$white-dark:        darken($white, 10%);
-$grey-dark:         darken($white, 60%);
-$black-light:       darken($white, 80%);
-$black:             lighten(black, 0%);
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome.scss";
 
-$blue: #58A4B0;
-$blue-lighter: lighten( $blue, 10% );
-$blue-darker: darken( $blue, 10% );
-$gray: #BAC1B8;
-$gray-lighter: lighten( $gray, 10% );
-$gray-darker: darken( $gray, 10% );
-$green: #0C7C59;
-$green-lighter: lighten( $green, 10% );
-$green-darker: darken( $green, 10% );
-$metal: #2B303A;
-$metal-lighter: lighten( $metal, 10% );
-$metal-darker: darken( $metal, 10% );
-$orange: #D64933;
-$orange-lighter: lighten( $orange, 10% );
-$orange-darker: darken( $orange, 10% );
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
 
-$primary: $blue;
-$primary-lighter: lighten( $primary, 10% );
-$primary-darker: darken( $primary, 10% );
-
-$font-size-large: 16px;
-$font-size-medium: 14px;
-$font-size-small: 12px;
+@import 'variables';
 
 html, body {
     height: 100%;
@@ -105,6 +83,10 @@ p {
         padding: 5rem;
         height: 100%;
 
+        @include breakpoint(small down) {
+            padding: 2.5rem;
+        }
+
         &-text {
             @include flex-grid-column(12);
         }
@@ -118,28 +100,26 @@ p {
 }
 
 .header {
-    background-image: url('../images/newcastle.jpg');
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-color: $primary;
     background-blend-mode: soft-light;
     width: 100%;
     text-align: center;
 
     &-wrapper {
-        min-height: 100vh;        
+        min-height: 100vh;
     }
 }
 
 .main {
 
     &-wrapper {
-        @include flex-align('spaced','middle');
+        @include flex-align('spaced', 'top');
 
         &-text {
 
@@ -170,15 +150,18 @@ p {
 }
 
 .experience {
-    background-color: $metal-lighter;
-
     h3,
     h5,
     p {
-        color: $near-white;        
+        color: $near-white;
     }
     .divider {
         border-color: $near-white;
+    }
+
+    .experience-item,
+    .resume {
+        width: 100%;
     }
 
     .resume-item {
@@ -238,11 +221,10 @@ p {
 }
 
 .footer {
-    background-color: $orange-lighter;
     padding-bottom: 5rem;
 
     h3 {
-        color: $near-white;        
+        color: $near-white;
     }
     .divider {
         border-color: $near-white;
@@ -271,7 +253,7 @@ p {
                 font-size: 1.5em;
                 padding-right: 0.5em;
                 vertical-align: bottom;
-            }            
+            }
         }
     }
 }

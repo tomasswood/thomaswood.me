@@ -1,0 +1,19 @@
+{
+  "name": "Thomas Wood | Web Developer | Software Engineer",
+  "short_name": "Thomas Wood",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF",
+  "theme_color": "#58A4B0",
+  "icons": [{
+    "src": "/assets/icons/android-chrome-192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "/assets/icons/android-chrome-512x512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }]
+}
