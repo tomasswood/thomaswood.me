@@ -69,11 +69,25 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "+5hP":
+/***/ (function(module, exports) {
+
+module.exports = {"header":{"title":"Thomas Wood","subtitle":"Web Developer | Software Engineer","background_color":"#58A4B0","background_image":"newcastle.jpg","background_images":[{"width":2560,"filename":"newcastle-xlarge.jpg"},{"width":1920,"filename":"newcastle.jpg"},{"width":1600,"filename":"newcastle-large.jpg"},{"width":1280,"filename":"newcastle-medium.jpg"},{"width":960,"filename":"newcastle-small.jpg"},{"width":480,"filename":"newcastle-xsmall.jpg"}]},"profile":{"title":"Profile","background_color":"#FFF","about":{"title":"About me","description":"Web developer & software engineer with 6 years' experience focusing on scalable solutions for frontend and backend development. Passionate about creating high quality products and improving user experience."},"bio":{"title":"Bio","list":[{"label":"Name","value":"Thomas Wood"},{"label":"Age","value":24},{"label":"Location","value":"Newcastle"}]}},"experience":{"title":"Experience","background_color":"#414857","list":[{"title":"Education","list":[{"location":"Tomaree High School","time":{"from":"2005","to":"2010"},"title":"High School Certificate","description":"I graduated high school where I had a large focus in Information Technology and Software Development."},{"location":"University of Newcastle","time":{"from":"2011","to":"2013"},"title":"Bachelor of Information Technology","description":"During my degree I focused on Software Development whilst also taking a keen interest in Digital Media and design. I learnt a lot of different languages and about OOP principles."}]},{"title":"Career","list":[{"location":"Wipro Promax Analytics Solutions","time":{"from":"Nov 2011","to":"Apr 2014"},"title":"QA Analyst","description":"During my studies I worked part-time as a QA analyst writing and performing functional, regression, integration and unit tests. I was responsible for evaluating software test procedures and documenting test cases based on functionl and technical specifications."},{"location":"One-Clique Designs","time":{"from":"Jan 2011","to":"May 2014"},"title":"Web Engineer, Co-Founder","description":"I ran a partnership web design business catering to small and medium sized businesses; where we completed multiple contracts working alongside clients to deliver to them a solution for their future web presence. I worked on the design and coding solution side of the business, focusing mainly on building dynamic templates from scratch and implementing them into a Content Management System."},{"location":"Flindle","time":{"from":"Aug 2013","to":"May 2014"},"title":"Developer, DBA, Co-Founder","description":"I co-founded and was one of the main developers of Flindle; working on both the frontend and the backend, building a scalable online booking management system for small-medium businesses. We won the DiG Festival Pitch Competition and participated in and completed the Slingshot Start-up Acceleration program."},{"location":"YesBookit","time":{"from":"May 2014","to":"Present"},"title":"Software & Web Developer","description":"During my time at YesBookit I have been responsible for developing the core software in an agile environment through continuous improvement from database design through to frontend development. I manage my own projects from inception to implementation working directly alongside support and sales teams, as well as clients, to determine the requirements and scope of new features. My main focus within the team is on front-end design and the implementation of modern technology."}]}]},"skills":{"title":"Skills","background_color":"#FFF","list":[{"label":"HTML","value":5},{"label":"CSS","value":5},{"label":"SASS","value":4},{"label":"LESS","value":3},{"label":"JavaScript","value":4},{"label":"jQuery","value":5},{"label":"React","value":4},{"label":"Perl","value":3},{"label":"PHP","value":2},{"label":"MySQL","value":4}]},"contact":{"title":"Contact","background_color":"#DF6F5D","list":[{"label":"Screencast-O-Matic","link":"https://screencast-o-matic.com/u/h3Hj/thomas-wood","icon_class":"dot-circle-o"},{"label":"tom@thomaswood.me","link":"mailto:tom@thomaswood.me","icon_class":"envelope"},{"label":"Stack Overflow","link":"https://stackoverflow.com/users/1850782/thomas-wood","icon_class":"stack-overflow"},{"label":"CodePen","link":"https://codepen.io/tomasswood/","icon_class":"codepen"},{"label":"LinkedIn","link":"https://www.linkedin.com/in/thomas-wood-aus","icon_class":"linkedin-square"},{"label":"GitHub","link":"https://github.com/tomasswood","icon_class":"github"}]}}
+
+/***/ }),
+
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("JkW7");
 
+
+/***/ }),
+
+/***/ "4eXR":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "234e30fcb8d8f3074faf94677f88c158.jpg";
 
 /***/ }),
 
@@ -122,11 +136,11 @@ var Home = function (_Component) {
 		}
 
 		return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = {
-			profile: {} // require('../../profile.json')
+			profile: __webpack_require__("+5hP")
 		}, _temp), _possibleConstructorReturn(_this, _ret);
 	}
 
-	Home.prototype.componentWillMount = function componentWillMount() {
+	Home.prototype.componentDidMount = function componentDidMount() {
 		var _this2 = this;
 
 		__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_unfetch__["a" /* default */])('/profile.json').then(function (response) {
@@ -156,6 +170,13 @@ var Home = function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_preact__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "ELET":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "f07de9feb4b96a94cca030577f550cd5.jpg";
 
 /***/ }),
 
@@ -263,6 +284,35 @@ var Profile = function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_preact__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "JBMF":
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./newcastle-large.jpg": "TH7f",
+	"./newcastle-medium.jpg": "mo1Q",
+	"./newcastle-small.jpg": "ELET",
+	"./newcastle-xlarge.jpg": "YmqD",
+	"./newcastle-xsmall.jpg": "4eXR",
+	"./newcastle.jpg": "UCVP"
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "JBMF";
 
 /***/ }),
 
@@ -484,6 +534,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
+/***/ "NfrT":
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./newcastle-large.jpg": "TH7f",
+	"./newcastle-medium.jpg": "mo1Q",
+	"./newcastle-small.jpg": "ELET",
+	"./newcastle-xlarge.jpg": "YmqD",
+	"./newcastle-xsmall.jpg": "4eXR",
+	"./newcastle.jpg": "UCVP"
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "NfrT";
+
+/***/ }),
+
 /***/ "QAmr":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -558,6 +637,13 @@ var index = typeof fetch == 'function' ? fetch.bind() : function (url, options) 
 
 /* harmony default export */ __webpack_exports__["a"] = (index);
 //# sourceMappingURL=unfetch.es.js.map
+
+/***/ }),
+
+/***/ "TH7f":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "9e4e1d8d6f4efb1f85bcc338de57704f.jpg";
 
 /***/ }),
 
@@ -650,6 +736,13 @@ var Footer = function (_Component2) {
 }(__WEBPACK_IMPORTED_MODULE_0_preact__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "UCVP":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "cfb572d7700e8995aefaf25a49cbb7d9.jpg";
 
 /***/ }),
 
@@ -802,6 +895,13 @@ var Experience = function (_Component3) {
 
 /***/ }),
 
+/***/ "YmqD":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fa1386098b541e95769539f4bdb64bf8.jpg";
+
+/***/ }),
+
 /***/ "jJeW":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -819,25 +919,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var determineImage = function determineImage(backgroundImage, backgroundImages) {
-	var viewport = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-	    ratio = window.devicePixelRatio || 1;
+var requireAll = function requireAll(requireContext) {
+	return requireContext.keys().map(requireContext);
+};
 
-	var headerImage = backgroundImage;
+var determineImage = function determineImage(backgroundImage, backgroundImages) {
+	var viewport = typeof window !== 'undefined' ? window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth : '1920',
+	    ratio = typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1;
+
+	var headerImage = __webpack_require__("JBMF")("./" + backgroundImage);
 	if (backgroundImages) {
-		var imageSizes = backgroundImages.filter(function (image) {
-			return viewport * ratio < image.width;
-		});
-		if (imageSizes.length) {
-			var lastImage = imageSizes.pop();
-			if (lastImage) {
+		var imageModules = requireAll(__webpack_require__("NfrT"));
+		var imagesSized = backgroundImages.reduce(function (arr, image, i) {
+			if (viewport * ratio < image.width) {
+				image.filename = imageModules[i];
+				arr.push(image);
+			}
+
+			return arr;
+		}, []);
+		if (imagesSized.length) {
+			var lastImage = imagesSized.pop();
+			if (lastImage && lastImage.filename) {
 				headerImage = lastImage.filename;
 			}
 		}
 	}
 
 	if (headerImage) {
-		return "url(../../assets/" + headerImage + ")";
+		return 'url(' + headerImage + ')';
 	}
 
 	return;
@@ -859,22 +969,22 @@ var Header = function (_Component) {
 		var background_image = _ref.background_image;
 
 		return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-			"header",
-			{ "class": "header", style: { backgroundColor: props.background_color || null, backgroundImage: background_image } },
+			'header',
+			{ 'class': 'header', style: { backgroundColor: props.background_color || null, backgroundImage: background_image } },
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-				"div",
-				{ "class": "header-wrapper" },
+				'div',
+				{ 'class': 'header-wrapper' },
 				__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-					"div",
-					{ "class": "header-wrapper-text" },
+					'div',
+					{ 'class': 'header-wrapper-text' },
 					__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-						"h1",
-						{ "class": "title", itemprop: "name" },
+						'h1',
+						{ 'class': 'title', itemprop: 'name' },
 						props.title
 					),
 					__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-						"h2",
-						{ "class": "subtitle", itemprop: "jobTitle" },
+						'h2',
+						{ 'class': 'subtitle', itemprop: 'jobTitle' },
 						props.subtitle
 					)
 				)
@@ -886,6 +996,13 @@ var Header = function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_preact__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "mo1Q":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "dde14227fd6e8257f5a31eb7deb2ea3a.jpg";
 
 /***/ }),
 
